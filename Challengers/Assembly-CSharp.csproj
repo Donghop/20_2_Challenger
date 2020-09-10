@@ -63,7 +63,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CharacterAssets\Suriyun\Scripts\AnimatorController.cs" />
+    <Compile Include="Assets\CharacterAssets\Suriyun\Scripts\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\CharaOutline.cginc" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\CharaMain.cginc" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\readme.txt" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\CharaSkin.cginc" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
+    <None Include="Assets\CharacterAssets\Suriyun\README.txt" />
+    <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/KimdongHOW~/Documents/20_2_Challenger/Challengers/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
