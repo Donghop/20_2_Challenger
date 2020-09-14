@@ -12,7 +12,7 @@ public class EnemyHpBar : MonoBehaviour
 
     void Update()
     {
-        transform.position = enemy.position;
+        
         hpSlider.value =Mathf.Lerp(hpSlider.value, currentHp / maxHp, Time.deltaTime*5f);
     }
 }

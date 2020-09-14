@@ -15,7 +15,7 @@ public class EnemyBase : MonoBehaviour
     protected float attackCollTimeCacl = 5f;
     protected bool canAtk = true;
 
-    protected float moveSpeed = 2f;
+    protected float moveSpeed = 15f;
 
     protected GameObject Player;
     protected NavMeshAgent nvAgent;
