@@ -7,8 +7,8 @@ public class EnemyHpBar : MonoBehaviour
 {
     public Slider hpSlider;
     public Transform enemy;
-    public float maxHp = 1000f;
-    public float currentHp = 1000f;
+    public float maxHp = 8000f;
+    public float currentHp = 8000f;
 
     void Update()
     {

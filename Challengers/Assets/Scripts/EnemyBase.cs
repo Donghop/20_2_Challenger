@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemyBase : MonoBehaviour
 {
-    public float maxHp = 1000f;
-    public float currentHp = 1000f;
+    public float maxHp = 2000f;
+    public float currentHp = 2000f;
 
     public float damage = 100f;
 

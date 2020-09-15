@@ -65,10 +65,12 @@
   <ItemGroup>
     <Compile Include="Assets\CharacterAssets\Suriyun\Scripts\AnimatorController.cs" />
     <Compile Include="Assets\CharacterAssets\Suriyun\Scripts\MouseOrbitImproved.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\EnemyControll.cs" />
     <Compile Include="Assets\Scripts\EnemyHpBar.cs" />
     <Compile Include="Assets\Scripts\EnemyMeleeFSM.cs" />
+    <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
