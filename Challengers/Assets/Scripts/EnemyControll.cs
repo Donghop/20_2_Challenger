@@ -45,7 +45,7 @@ public class EnemyControll : EnemyMeleeFSM
         {
 
            
-            for (int i = 1; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {
                 var bullet = ObjectPool.GetObject();
                 bullet.transform.position = fireposition[i].transform.position;
@@ -158,7 +158,7 @@ public class EnemyControll : EnemyMeleeFSM
            
         }
 
-       else if (collision.transform.CompareTag("wall")) 
+       else if (collision.transform.CompareTag("wall") || collision.transform.CompareTag("Boss")) 
         {
             Debug.Log("wall check");
             // 입사벡터를 알아본다. (충돌할때 충돌한 물체의 입사 벡터 노말값)
@@ -173,6 +173,9 @@ public class EnemyControll : EnemyMeleeFSM
             direct.x = reflectVector.x;
             direct.z = reflectVector.z;
         }
+
+        
+        
     }
 
     //IEnumerator Fire()
@@ -217,7 +220,7 @@ public class EnemyControll : EnemyMeleeFSM
 
             TotalHp = TotalHp - hitTest;
         }
-        hpCount.text = 8000 + "/" + enemyCanvasGo.GetComponent<EnemyHpBar>().currentHp;
+        hpCount.text = enemyCanvasGo.GetComponent<EnemyHpBar>().currentHp + "/" + 8000;
     }
     
 }

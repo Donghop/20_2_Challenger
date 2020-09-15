@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5038439336004974356}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirePoint_back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5191263690186626705}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirePoint_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8332173573530488987}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirePoint_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3253907723928269119}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirePoint_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8943009037411397483}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EyeBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8936825871134840085}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8936796028994891667}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EyeCTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,9 +229,9 @@ GameObject:
   - component: {fileID: 8938036892560274633}
   - component: {fileID: 8938036892560274634}
   - component: {fileID: 6808473978888351696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SlimePBR1
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -325,7 +325,6 @@ MonoBehaviour:
   direct: {x: 0, y: 0, z: 0}
   TotalHp: 8000
   fireposition:
-  - {fileID: 0}
   - {fileID: 2327054216621770323}
   - {fileID: 1376895811136887982}
   - {fileID: 5828790425894381649}
@@ -343,7 +342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8942554618987879741}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Side_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8936527145027110435}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BottomEyeCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8936282428656290535}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UpperEyeCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8936470109874276193}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Crown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8936288124062238055}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Side_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8936772724784377253}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8936799667450705549}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8936514648778008215}
   - component: {fileID: 9071233379543827041}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}

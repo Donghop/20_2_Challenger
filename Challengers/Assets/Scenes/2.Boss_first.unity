@@ -1075,6 +1075,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1189874255011212, guid: 007f5bdc3fac8f543b83ae60517cd050, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4109714994798658, guid: 007f5bdc3fac8f543b83ae60517cd050, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1760,26 +1764,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1732904972}
     m_Modifications:
-    - target: {fileID: 329339224685930914, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376895811136887982, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2327054216621770323, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5828790425894381649, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 6808473978888351696, guid: 054ab49b679b6c547a055076bc31640f,
         type: 3}
       propertyPath: enemyCanvasGo
@@ -1850,70 +1834,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8937831098220644195, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8937868247621922709, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938597960438093009, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 8938686924851119909, guid: 054ab49b679b6c547a055076bc31640f,
         type: 3}
       propertyPath: m_Name
       value: SlimePBR1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938686924851119909, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8938898569253569317, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8939178608751519529, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8939278453374517503, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8939348697021069331, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8939397260371363933, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8939477946131891055, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8939498048740935905, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8939543756019863179, guid: 054ab49b679b6c547a055076bc31640f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 054ab49b679b6c547a055076bc31640f, type: 3}

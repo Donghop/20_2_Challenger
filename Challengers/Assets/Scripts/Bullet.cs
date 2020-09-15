@@ -5,23 +5,20 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Vector3 direction;
-    private float speed = 3f;
+    private float speed = 10f;
     public void Shoot(Vector3 direction)
-
     {
+       
         this.direction = direction;
         
-        Invoke("DestroyBullet", 5f);
+       
     }
 
-    public void DestroyBullet()
-    {
-        ObjectPool.ReturnObject(this);
-    }
+  
 
     void Update()
     {
-        transform.Translate(direction*speed* Time.deltaTime);
+        transform.Translate(Vector3.forward*speed* Time.deltaTime);
         
     }
 

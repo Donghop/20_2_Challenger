@@ -28,7 +28,7 @@ using UnityEngine;
 
 
 
-            Initialize(4);
+            Initialize(10);
 
         }
 
@@ -69,11 +69,10 @@ using UnityEngine;
         public static Bullet GetObject()
 
     {
-        Debug.Log("get object in");
-
+       
         if (Instance.poolingObjectQueue.Count > 0)
             {
-            Debug.Log("get object if");
+            
             var obj = Instance.poolingObjectQueue.Dequeue();
 
                 obj.transform.SetParent(null);
@@ -86,7 +85,7 @@ using UnityEngine;
 
             else
             {
-            Debug.Log("get object else");
+           
                 var newObj = Instance.CreateNewObject();
 
                 newObj.gameObject.SetActive(true);
