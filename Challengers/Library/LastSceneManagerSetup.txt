@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/2.Boss_first.unity
+- path: Assets/Scenes/3.PlayerTest.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
