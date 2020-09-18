@@ -26,13 +26,18 @@ public class EnemyControll : EnemyMeleeFSM
 
     private void Start()
     {
-
+        
         tr = GetComponent<Transform>();
-        float randomCount = Random.Range(0f, 1f);
+        int randomCount = Random.Range(1, 2);
         direct = new Vector3(randomCount, 0, randomCount);
+<<<<<<< HEAD
 
 
        StartCoroutine(Fire());
+=======
+        
+        StartCoroutine(Fire());
+>>>>>>> 4b13a16c24a3be1b54a110f61f4a778960c02960
 
 
     }
@@ -40,12 +45,19 @@ public class EnemyControll : EnemyMeleeFSM
     private void Update()
     {
 
+<<<<<<< HEAD
        
 
         tr.Translate(direct * moveSpeed * Time.deltaTime);
 
       
+=======
+      
+        tr.Translate(direct * moveSpeed * Time.deltaTime);
+        
+>>>>>>> 4b13a16c24a3be1b54a110f61f4a778960c02960
        
+
         if (currentHp <= 0)
         {
            
@@ -54,7 +66,7 @@ public class EnemyControll : EnemyMeleeFSM
 
             if (!gameObject.activeSelf)
             {
-                Debug.Log("success");
+              
                 currentHp = 0;
                 hitTest = 300;
                 StopCoroutine(Fire());
@@ -79,7 +91,11 @@ public class EnemyControll : EnemyMeleeFSM
         {
             maxHp = 500f;
             currentHp = 500f;
+<<<<<<< HEAD
            
+=======
+          
+>>>>>>> 4b13a16c24a3be1b54a110f61f4a778960c02960
             this.gameObject.transform.localScale -= new Vector3(1, 1, 1);
             
             this.gameObject.SetActive(true);
@@ -90,7 +106,11 @@ public class EnemyControll : EnemyMeleeFSM
         {
             maxHp = 250f;
             currentHp = 250f;
+<<<<<<< HEAD
             
+=======
+          
+>>>>>>> 4b13a16c24a3be1b54a110f61f4a778960c02960
 
             this.gameObject.transform.localScale -= new Vector3(1, 1, 1);
             
@@ -140,7 +160,7 @@ public class EnemyControll : EnemyMeleeFSM
 
        else if (collision.transform.CompareTag("wall") || collision.transform.CompareTag("Boss")) 
         {
-            Debug.Log("wall check");
+            
             // 입사벡터를 알아본다. (충돌할때 충돌한 물체의 입사 벡터 노말값)
             Vector3 incomingVector = direct;
             incomingVector = incomingVector.normalized;
@@ -152,6 +172,7 @@ public class EnemyControll : EnemyMeleeFSM
 
             direct.x = reflectVector.x;
             direct.z = reflectVector.z;
+            
         }
 
         
@@ -165,7 +186,11 @@ public class EnemyControll : EnemyMeleeFSM
         {
             
             yield return new WaitForSeconds(2);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 4b13a16c24a3be1b54a110f61f4a778960c02960
             for (int i = 0; i < 4; i++)
             {
                 var bullet = ObjectPool.GetObject();
