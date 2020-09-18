@@ -22,8 +22,7 @@ public class EnemyControll : EnemyMeleeFSM
 
     public float hitTest = 300f;
 
-    //[SerializeField]
-    //private GameObject bulltePrefab;
+    
 
     private void Start()
     {
@@ -33,7 +32,7 @@ public class EnemyControll : EnemyMeleeFSM
         direct = new Vector3(randomCount, 0, randomCount);
 
 
-       // StartCoroutine(Fire());
+       StartCoroutine(Fire());
 
 
     }
@@ -41,23 +40,11 @@ public class EnemyControll : EnemyMeleeFSM
     private void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
-        {
-
-           
-            for (int i = 0; i < 4; i++)
-            {
-                var bullet = ObjectPool.GetObject();
-                bullet.transform.position = fireposition[i].transform.position;
-                bullet.transform.rotation = fireposition[i].transform.rotation;
-                bullet.Shoot(fireposition[i].transform.position);
-            }
-        }
+       
 
         tr.Translate(direct * moveSpeed * Time.deltaTime);
 
-        // tr.transform.rotation = Quaternion.LookRotation(direct);
-        // Debug.Log(direct + "what rotate");
+      
        
         if (currentHp <= 0)
         {
@@ -70,6 +57,7 @@ public class EnemyControll : EnemyMeleeFSM
                 Debug.Log("success");
                 currentHp = 0;
                 hitTest = 300;
+                StopCoroutine(Fire());
                 DoubleSlime();
             }
         }
@@ -80,49 +68,41 @@ public class EnemyControll : EnemyMeleeFSM
         {
             maxHp = 1000f;
             currentHp = 1000f;
-            //enemyCanvasGo.GetComponent<EnemyHpBar>().currentHp += 1000f;
-
-            Debug.Log(currentHp);
-            Debug.Log(enemyCanvasGo.GetComponent<EnemyHpBar>().currentHp);
-
+          
             this.gameObject.transform.localScale -= new Vector3(1, 1, 1);
             
             this.gameObject.SetActive(true);
             Instantiate(doublePlay, EnemyParent.transform);
+            StartCoroutine(Fire());
         }
         else if (deathCount == 2)
         {
             maxHp = 500f;
             currentHp = 500f;
-            // enemyCanvasGo.GetComponent<EnemyHpBar>().currentHp += 500f;
-
-            Debug.Log(currentHp);
-            Debug.Log(enemyCanvasGo.GetComponent<EnemyHpBar>().currentHp);
-
+           
             this.gameObject.transform.localScale -= new Vector3(1, 1, 1);
             
             this.gameObject.SetActive(true);
-            Instantiate(doublePlay);
+            Instantiate(doublePlay, EnemyParent.transform);
+            StartCoroutine(Fire());
         }
         else if (deathCount == 3)
         {
             maxHp = 250f;
             currentHp = 250f;
-            // enemyCanvasGo.GetComponent<EnemyHpBar>().currentHp += 250f;
-
-            Debug.Log(currentHp);
-            Debug.Log(enemyCanvasGo.GetComponent<EnemyHpBar>().currentHp);
+            
 
             this.gameObject.transform.localScale -= new Vector3(1, 1, 1);
             
             this.gameObject.SetActive(true);
-            Instantiate(doublePlay);
+            Instantiate(doublePlay, EnemyParent.transform);
+            StartCoroutine(Fire());
         }
         else if (deathCount >= 4)
         {
             this.gameObject.SetActive(false);
             doublePlay.SetActive(false);
-
+            StopAllCoroutines();
         }
     }
 
@@ -178,18 +158,23 @@ public class EnemyControll : EnemyMeleeFSM
         
     }
 
-    //IEnumerator Fire()
-    //{
-        
-    //    while(true)
-    //    {
-    //        Debug.Log("start?");
-    //        yield return new WaitForSeconds(2);
-    //        var bullet = ObjectPool.GetObject();
-    //        bullet.transform.position = direct.normalized;
-    //        bullet.Shoot(direct.normalized);
-    //    }
-    //}
+    IEnumerator Fire()
+    {
+
+        while (true)
+        {
+            
+            yield return new WaitForSeconds(2);
+
+            for (int i = 0; i < 4; i++)
+            {
+                var bullet = ObjectPool.GetObject();
+                bullet.transform.position = fireposition[i].transform.position;
+                bullet.transform.rotation = fireposition[i].transform.rotation;
+                bullet.Shoot(fireposition[i].transform.position);
+            }
+        }
+    }
 
 
 

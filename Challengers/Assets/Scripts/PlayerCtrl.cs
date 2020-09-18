@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float rotSpeed = 200.0f;
+    public float speed;
+    public float rotSpeed;
+    public bool canMove;
 
     private Rigidbody rb;
     private Transform tr;
@@ -14,21 +15,27 @@ public class PlayerCtrl : MonoBehaviour
 
     void Start()
     {
+        speed = 5.0f;
+        rotSpeed = 200.0f;
         rb = GetComponent<Rigidbody>();
         tr = GetComponent<Transform>();
         anim = GetComponent<Animator>();
+        canMove = true;
     }
 
     void Update()
-    {      
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+    {
+        if (canMove == true)
+        {
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
 
-        anim.SetBool("isMove", moveDir != Vector3.zero);
+            anim.SetBool("isMove", moveDir != Vector3.zero);
 
-        moveDir = new Vector3(h, 0, v).normalized;
+            moveDir = new Vector3(h, 0, v).normalized;
 
-        transform.position += moveDir * speed * Time.deltaTime;
-        transform.LookAt(transform.position + moveDir);       
+            transform.position += moveDir * speed * Time.deltaTime;
+            transform.LookAt(transform.position + moveDir);
+        }        
     }
 }

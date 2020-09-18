@@ -71,8 +71,10 @@
     <Compile Include="Assets\Scripts\EnemyHpBar.cs" />
     <Compile Include="Assets\Scripts\EnemyMeleeFSM.cs" />
     <Compile Include="Assets\Scripts\FollowCam.cs" />
+    <Compile Include="Assets\Scripts\KnightAttack.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
+    <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\CharaOutline.cginc" />
