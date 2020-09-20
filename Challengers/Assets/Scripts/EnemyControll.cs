@@ -30,14 +30,10 @@ public class EnemyControll : EnemyMeleeFSM
         tr = GetComponent<Transform>();
         int randomCount = Random.Range(1, 2);
         direct = new Vector3(randomCount, 0, randomCount);
-<<<<<<< HEAD
-
 
        StartCoroutine(Fire());
-=======
-        
-        StartCoroutine(Fire());
->>>>>>> 4b13a16c24a3be1b54a110f61f4a778960c02960
+
+
 
 
     }
@@ -45,18 +41,9 @@ public class EnemyControll : EnemyMeleeFSM
     private void Update()
     {
 
-<<<<<<< HEAD
-       
 
         tr.Translate(direct * moveSpeed * Time.deltaTime);
 
-      
-=======
-      
-        tr.Translate(direct * moveSpeed * Time.deltaTime);
-        
->>>>>>> 4b13a16c24a3be1b54a110f61f4a778960c02960
-       
 
         if (currentHp <= 0)
         {
@@ -91,11 +78,7 @@ public class EnemyControll : EnemyMeleeFSM
         {
             maxHp = 500f;
             currentHp = 500f;
-<<<<<<< HEAD
-           
-=======
-          
->>>>>>> 4b13a16c24a3be1b54a110f61f4a778960c02960
+
             this.gameObject.transform.localScale -= new Vector3(1, 1, 1);
             
             this.gameObject.SetActive(true);
@@ -106,11 +89,7 @@ public class EnemyControll : EnemyMeleeFSM
         {
             maxHp = 250f;
             currentHp = 250f;
-<<<<<<< HEAD
-            
-=======
-          
->>>>>>> 4b13a16c24a3be1b54a110f61f4a778960c02960
+
 
             this.gameObject.transform.localScale -= new Vector3(1, 1, 1);
             
@@ -186,11 +165,7 @@ public class EnemyControll : EnemyMeleeFSM
         {
             
             yield return new WaitForSeconds(2);
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 4b13a16c24a3be1b54a110f61f4a778960c02960
             for (int i = 0; i < 4; i++)
             {
                 var bullet = ObjectPool.GetObject();

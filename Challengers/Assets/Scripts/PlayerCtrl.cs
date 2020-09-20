@@ -5,10 +5,8 @@ using UnityEngine;
 public class PlayerCtrl : MonoBehaviour
 {
     public float speed;
-    public float rotSpeed;
     public bool canMove;
 
-    private Rigidbody rb;
     private Transform tr;
     private Animator anim;
     private Vector3 moveDir;
@@ -16,8 +14,6 @@ public class PlayerCtrl : MonoBehaviour
     void Start()
     {
         speed = 5.0f;
-        rotSpeed = 200.0f;
-        rb = GetComponent<Rigidbody>();
         tr = GetComponent<Transform>();
         anim = GetComponent<Animator>();
         canMove = true;
@@ -34,8 +30,8 @@ public class PlayerCtrl : MonoBehaviour
 
             moveDir = new Vector3(h, 0, v).normalized;
 
-            transform.position += moveDir * speed * Time.deltaTime;
-            transform.LookAt(transform.position + moveDir);
+            tr.position += moveDir * speed * Time.deltaTime;
+            tr.LookAt(tr.position + moveDir);
         }        
     }
 }

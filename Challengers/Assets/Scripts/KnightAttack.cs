@@ -9,8 +9,6 @@ public class KnightAttack : MonoBehaviour
     private Animator anim;
     private PlayerCtrl pc;
 
-    public AnimationCurve ac;
-
     private bool comboPossible;
     private int comboStep;
     private bool canDash;
@@ -26,7 +24,7 @@ public class KnightAttack : MonoBehaviour
 
     private void Start()
     {
-        pc = GameObject.Find("Player").GetComponent<PlayerCtrl>();
+        pc = GameObject.FindWithTag("Player").GetComponent<PlayerCtrl>();
         anim = GetComponent<Animator>();
         dashSpeed = 15.0f;
         dashTime = 0.3f;
@@ -71,7 +69,7 @@ public class KnightAttack : MonoBehaviour
         if (comboStep == 0)
         {
             ChangeDirection();
-            anim.Play("ATK1");
+            anim.Play("KnightAtk1");
             comboStep = 1;
         }
         else if (comboStep != 0)
@@ -89,12 +87,12 @@ public class KnightAttack : MonoBehaviour
         if (comboStep == 2)
         {
             ChangeDirection();
-            anim.Play("ATK2");
+            anim.Play("KnightAtk2");
         }
         else if (comboStep == 3)
         {
             ChangeDirection();
-            anim.Play("ATK3");
+            anim.Play("KnightAtk3");
         }
     }
 

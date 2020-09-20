@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\EnemyMeleeFSM.cs" />
     <Compile Include="Assets\Scripts\FollowCam.cs" />
     <Compile Include="Assets\Scripts\KnightAttack.cs" />
+    <Compile Include="Assets\Scripts\MageAttack.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
