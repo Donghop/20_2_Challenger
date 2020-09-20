@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class FollowCam : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     private Vector3 offset;
 
     private void Start()
     {
+        player = GameObject.FindWithTag("Player").GetComponent<Transform>();
         offset = transform.position - player.position;
     }
 
