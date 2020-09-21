@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MageAttack : MonoBehaviour
 {
+    public Image tpCooldownImage;
     private PlayerCtrl pc;
     private Animator anim;
 
     private bool isAttack;
+    private bool canTP;
 
     [SerializeField]
     private float chargeTime;
+    private float tpCooldown;
 
     private Ray ray;
     private RaycastHit hit;
@@ -20,7 +24,9 @@ public class MageAttack : MonoBehaviour
         pc = GameObject.FindWithTag("Player").GetComponent<PlayerCtrl>();
         anim = GetComponent<Animator>();
         chargeTime = 0;
+        tpCooldown = 8.0f;
         isAttack = false;
+        canTP = true;
     }
 
     private void Update()
@@ -38,7 +44,7 @@ public class MageAttack : MonoBehaviour
             ChargeAttack(chargeTime);
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetKeyDown(KeyCode.LeftShift) && canTP == true)
         {
             Teleport();
         }
@@ -88,6 +94,9 @@ public class MageAttack : MonoBehaviour
 
     private void Teleport()
     {
+        isAttack = true;
+        pc.canMove = false;
+        canTP = false;
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit))
@@ -95,5 +104,25 @@ public class MageAttack : MonoBehaviour
             Vector3 mousePosition = hit.point;
             transform.position = new Vector3(mousePosition.x, mousePosition.y, mousePosition.z);
         }
+        anim.Play("Teleport");
+        StartCoroutine(CheckTPCooldown(tpCooldown));
+    }
+
+    public void EndTeleport()
+    {
+        pc.canMove = true;
+        isAttack = false;
+    }
+
+    IEnumerator CheckTPCooldown(float cool) //대쉬 쿨타임 체크
+    {
+        while (cool > 0.0f)
+        {
+            cool -= Time.deltaTime;
+            tpCooldownImage.fillAmount = ((1 - (cool / tpCooldown)));
+            yield return null;
+        }
+        canTP = true;
+        tpCooldownImage.fillAmount = 1;
     }
 }
