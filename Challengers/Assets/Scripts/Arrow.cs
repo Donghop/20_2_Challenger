@@ -4,10 +4,21 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    private float speed = 5.0f;
+    private Rigidbody rb;
 
-    private void Update()
+    private float speed;
+
+    private void Start()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        speed = 3.0f;
+        rb = GetComponent<Rigidbody>();
+
+        rb.AddForce(transform.forward * speed, ForceMode.Impulse);
+    }
+
+
+    private void OnTriggerEnter(Collider coll)
+    {
+        Destroy(this.gameObject);
     }
 }

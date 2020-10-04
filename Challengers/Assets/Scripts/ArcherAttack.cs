@@ -6,8 +6,11 @@ public class ArcherAttack : MonoBehaviour
 {
     private PlayerCtrl pc;
     private Animator anim;
+
     public Transform spawnPoint;
 
+    [SerializeField]
+    private int attackStack;
     private bool isAttack;
 
     public GameObject arrow;
@@ -17,6 +20,7 @@ public class ArcherAttack : MonoBehaviour
         pc = GameObject.FindWithTag("Player").GetComponent<PlayerCtrl>();
         anim = GetComponent<Animator>();
         isAttack = false;
+        attackStack = 0;
     }
 
     private void Update()
@@ -37,11 +41,21 @@ public class ArcherAttack : MonoBehaviour
 
     private void ShootArrow()
     {
-        Instantiate(arrow, spawnPoint);
+        if (attackStack < 2)
+        {
+            Instantiate(arrow, spawnPoint.position, spawnPoint.rotation);
+            attackStack++;
+        }
+        else
+        {
+            attackStack = 0;
+            Instantiate(arrow, spawnPoint.position, spawnPoint.rotation);          
+        }
     }
 
     public void EndAttack()
     {
         pc.canMove = true;
+        attackStack = 0;
     }
 }

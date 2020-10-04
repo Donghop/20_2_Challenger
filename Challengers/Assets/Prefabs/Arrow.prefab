@@ -1,17 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &7597828585366019387
-MonoBehaviour:
+--- !u!54 &5686680000460979814
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7706426957148663294}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6248176315743391502
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706426957148663294}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbb182d2f8dc968408fe000858d4d1ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Size: {x: 0.05106634, y: 0.017196046, z: 0.40804774}
+  m_Center: {x: 0.00043461937, y: 0.0000051315874, z: 0.17298824}
 --- !u!1001 &7706921686177812264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67,8 +84,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6812619981703198792, guid: 350b96c7d2b4e9d43a11356bdbaae649,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 95249553837541180, guid: 350b96c7d2b4e9d43a11356bdbaae649, type: 3}
+    - {fileID: 6812619981703198792, guid: 350b96c7d2b4e9d43a11356bdbaae649, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 350b96c7d2b4e9d43a11356bdbaae649, type: 3}
 --- !u!1 &7706426957148663294 stripped
 GameObject:
