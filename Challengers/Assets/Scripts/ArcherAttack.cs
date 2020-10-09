@@ -15,6 +15,9 @@ public class ArcherAttack : MonoBehaviour
 
     public GameObject arrow;
 
+    private Ray ray;
+    private RaycastHit hit;
+
     private void Start()
     {
         pc = GameObject.FindWithTag("Player").GetComponent<PlayerCtrl>();
@@ -35,6 +38,7 @@ public class ArcherAttack : MonoBehaviour
 
     private void Attack()
     {
+        ChangeDirection();
         pc.canMove = false;
         anim.Play("ArcherAtk");       
     }
@@ -57,5 +61,16 @@ public class ArcherAttack : MonoBehaviour
     {
         pc.canMove = true;
         attackStack = 0;
+    }
+
+    private void ChangeDirection() //공격, 대쉬 전 마우스 커서 방향으로 방향전환
+    {
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            Vector3 direction = hit.point;
+            transform.LookAt(new Vector3(direction.x, transform.position.y, direction.z));
+        }
     }
 }
