@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Boss
   - wall
+  - DashCooldownImage
+  - Arrow
+  - BlueFireball
+  - FlameStorm
+  - KnightAttack
   layers:
   - Default
   - TransparentFX

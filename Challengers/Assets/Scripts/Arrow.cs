@@ -6,19 +6,23 @@ public class Arrow : MonoBehaviour
 {
     private Rigidbody rb;
 
-    private float speed;
+    public float speed;
 
     private void Start()
     {
-        speed = 3.0f;
         rb = GetComponent<Rigidbody>();
 
         rb.AddForce(transform.forward * speed, ForceMode.Impulse);
+
+        Destroy(this.gameObject, 1.0f);
     }
 
 
     private void OnTriggerEnter(Collider coll)
     {
-        Destroy(this.gameObject);
+        if (coll.tag !="Player")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -7,8 +7,8 @@ public class FollowCam : MonoBehaviour
     private Transform player;
     private Vector3 offset;
 
-    private float distance = 3.0f;
-    private float height = 5.0f;
+    private float distance = 5.0f;
+    private float height = 1.0f;
     private float rotationDamping;
     private float heightDamping;
 

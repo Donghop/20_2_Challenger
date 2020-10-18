@@ -6,15 +6,21 @@ using UnityEngine.UI;
 public class KnightAttack : MonoBehaviour
 {
     public Image dashCooldownImage;
+    public Image DACooldownImage;
+    public Transform attackPoint;
+    public GameObject attackDummy;
     private Animator anim;
     private PlayerCtrl pc;
 
     private bool comboPossible;
     private int comboStep;
     private bool canDash;
+    private bool canDA;
+    private bool canAttack;
     private bool isAttack;
     private bool isDash;
     private float dashCooldown;
+    private float DACooldown;
     private float dashSpeed;
     private float dashTime;
 
@@ -30,7 +36,10 @@ public class KnightAttack : MonoBehaviour
         dashTime = 0.3f;
         comboStep = 0;
         canDash = true;
+        canDA = true;
+        canAttack = true;
         dashCooldown = 6.0f;
+        DACooldown = 5.0f;
         isAttack = false;
         isDash = false;
     }
@@ -39,7 +48,7 @@ public class KnightAttack : MonoBehaviour
     {
         anim.SetBool("isAttack", isAttack);
         anim.SetBool("isDash", isDash);
-        if (Input.GetMouseButtonDown(0)) //공격
+        if (Input.GetMouseButtonDown(0) && canAttack == true) //공격
         {
             Attack();
         }
@@ -47,6 +56,10 @@ public class KnightAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash == true) //대쉬
         {
             Dash();
+        }
+        if (Input.GetKeyDown(KeyCode.F) && canDA == true)
+        {
+            DoubleAttack();
         }
     }
 
@@ -109,6 +122,11 @@ public class KnightAttack : MonoBehaviour
         comboStep = 0;
     }
 
+    public void AttackTime()
+    {
+        Instantiate(attackDummy, attackPoint.position, attackPoint.rotation);
+    }
+
     private void Dash() //대쉬
     {
         canDash = false;
@@ -116,17 +134,35 @@ public class KnightAttack : MonoBehaviour
         isDash = true;
         isAttack = false;
         ChangeDirection();
-        anim.Play("Dash");
+        anim.Play("KnightDash");
         StartCoroutine(CheckDashTime(dashTime));
         StartCoroutine(CheckDashCooldown(dashCooldown));
     }
 
-    public void EndDash() //대쉬 종료
+    public void DoubleAttack()
+    {
+        canAttack = false;
+        canDA = false;
+        pc.canMove = false;
+        isAttack = true;
+        ChangeDirection();
+        anim.Play("KnightSkill");
+        StartCoroutine(CheckDACooldown(DACooldown));
+    }
+
+    public void EndKnightDash() //대쉬 종료
     {
         isDash = false;
         comboPossible = false;
         comboStep = 0;
+        pc.canMove = true;        
+    }
+
+    public void EndDoubleAttack()
+    {
         pc.canMove = true;
+        isAttack = false;
+        canAttack = true;
     }
 
     IEnumerator CheckDashCooldown(float cool) //대쉬 쿨타임 체크
@@ -149,5 +185,17 @@ public class KnightAttack : MonoBehaviour
             transform.Translate(Vector3.forward * dashSpeed * Time.deltaTime);
             yield return null;
         }
+    }
+
+    IEnumerator CheckDACooldown(float cool)
+    {
+        while (cool > 0.0f)
+        {
+            cool -= Time.deltaTime;
+            DACooldownImage.fillAmount = ((1 - (cool / DACooldown)));
+            yield return null;
+        }
+        canDA = true;
+        dashCooldownImage.fillAmount = 1;
     }
 }
