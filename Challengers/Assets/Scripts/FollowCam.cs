@@ -8,7 +8,7 @@ public class FollowCam : MonoBehaviour
     private Vector3 offset;
 
     private float distance = 5.0f;
-    private float height = 1.0f;
+    private float height = 10.0f;
     private float rotationDamping;
     private float heightDamping;
 

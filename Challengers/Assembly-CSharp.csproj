@@ -24,7 +24,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_3_10;UNITY_2019_3;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_3_10;UNITY_2019_3;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -62,14 +62,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BossAssets\EgyptMonsters\Scripts\DealDamageComponent.cs" />
+    <Compile Include="Assets\BossAssets\EgyptMonsters\Scripts\DemoController.cs" />
+    <Compile Include="Assets\BossAssets\EgyptMonsters\Scripts\DestroyMe.cs" />
+    <Compile Include="Assets\BossAssets\GabrielAguiarProductions\Unique_ToonProjectiles_Volume_1\Scripts\ParticleSystemController\ParticleSystemController.cs" />
+    <Compile Include="Assets\BossAssets\GabrielAguiarProductions\Unique_ToonProjectiles_Volume_1\Scripts\ParticleSystemController\ParticleSystemControllerEditor.cs" />
+    <Compile Include="Assets\BossAssets\GabrielAguiarProductions\Unique_ToonProjectiles_Volume_1\Scripts\ParticleSystemController\SaveParticleSystemScript.cs" />
+    <Compile Include="Assets\BossAssets\GabrielAguiarProductions\Unique_ToonProjectiles_Volume_1\Scripts\ParticleSystemController\Serializables.cs" />
+    <Compile Include="Assets\BossAssets\GabrielAguiarProductions\Unique_ToonProjectiles_Volume_1\Scripts\UniqueProjectiles\CameraShakeSimpleScript.cs" />
+    <Compile Include="Assets\BossAssets\GabrielAguiarProductions\Unique_ToonProjectiles_Volume_1\Scripts\UniqueProjectiles\ProjectileMoveScript.cs" />
+    <Compile Include="Assets\BossAssets\GabrielAguiarProductions\Unique_ToonProjectiles_Volume_1\Scripts\UniqueProjectiles\RotateToMouseScript.cs" />
+    <Compile Include="Assets\BossAssets\GabrielAguiarProductions\Unique_ToonProjectiles_Volume_1\Scripts\UniqueProjectiles\SpawnProjectilesScript.cs" />
+    <Compile Include="Assets\BossAssets\Hovl Studio\Toon projectiles\Demo scene\DemoShooting.cs" />
+    <Compile Include="Assets\BossAssets\Hovl Studio\Toon projectiles\Scripts\AutoDestroyPS.cs" />
+    <Compile Include="Assets\BossAssets\Hovl Studio\Toon projectiles\Scripts\ProjectileMover.cs" />
     <Compile Include="Assets\CharacterAssets\Suriyun\Scripts\AnimatorController.cs" />
     <Compile Include="Assets\CharacterAssets\Suriyun\Scripts\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Hovl Studio\Magic circles Vol 2\Demo scene\CameraHolder.cs" />
+    <Compile Include="Assets\Scripts\AncientGolem.cs" />
     <Compile Include="Assets\Scripts\ArcherAttack.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
-    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\BulletSpawner.cs" />
     <Compile Include="Assets\Scripts\CamRotate.cs" />
+    <Compile Include="Assets\Scripts\CameraTestDong\CameraButton.cs" />
+    <Compile Include="Assets\Scripts\CameraTestDong\TestCamerMove.cs" />
+    <Compile Include="Assets\Scripts\ChasingBullet.cs" />
+    <Compile Include="Assets\Scripts\EnemyADFSM.cs" />
     <Compile Include="Assets\Scripts\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\EnemyHpBar.cs" />
     <Compile Include="Assets\Scripts\EnemyMeleeFSM.cs" />
@@ -80,7 +98,6 @@
     <Compile Include="Assets\Scripts\KnightAttackObject.cs" />
     <Compile Include="Assets\Scripts\MageAttack.cs" />
     <Compile Include="Assets\Scripts\MyGizmos.cs" />
-    <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
@@ -92,12 +109,16 @@
     <Compile Include="Assets\Y17\Fantastic Fires\Scripts\FireEffect.cs" />
     <Compile Include="Assets\Y17\Fantastic Fires\Scripts\Fireball.cs" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\BossAssets\Hovl Studio\Toon projectiles\Demo scene\HDRP and URP(LWRP).txt" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\CharaOutline.cginc" />
+    <None Include="Assets\BossAssets\EgyptMonsters\Demo\DemoAssets\Shaders\GrassAnimate.shader" />
     <None Include="Assets\Hovl Studio\Magic circles Vol 2\Demo scene\HDRP and URP(LWRP).txt" />
     <None Include="Assets\Y17\Fantastic Fires\Shaders\FireEffect2.shader" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
+    <None Include="Assets\BossAssets\Hovl Studio\Toon projectiles\Shaders\DissolveNoise.shader" />
+    <None Include="Assets\BossAssets\Hovl Studio\Toon projectiles\Shaders\Add_Fresnel.shader" />
     <None Include="Assets\Hovl Studio\Magic circles Vol 2\Shaders\Distortion.shader" />
     <None Include="Assets\Hovl Studio\Magic circles Vol 2\Shaders\Blend_TwoSides.shader" />
     <None Include="Assets\Hovl Studio\Magic circles Vol 2\Shaders\Electricity.shader" />
@@ -105,16 +126,22 @@
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
     <None Include="Assets\Y17\Fantastic Fires\Shaders\FireEffect-Bulb.shader" />
     <None Include="Assets\Hovl Studio\Magic circles Vol 2\Shaders\Blend_CenterGlow.shader" />
+    <None Include="Assets\BossAssets\GabrielAguiarProductions\Unique_ToonProjectiles_Volume_1\Shaders\AdditiveMobile_Scroll01.shader" />
+    <None Include="Assets\BossAssets\EgyptMonsters\README.txt" />
     <None Include="Assets\Y17\Fantastic Fires\readme.txt" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\CharaMain.cginc" />
     <None Include="Assets\Y17\Fantastic Fires\Shaders\FireEffect.shader" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
     <None Include="Assets\Hovl Studio\Magic circles Vol 2\Demo scene\Readme.txt" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\readme.txt" />
+    <None Include="Assets\BossAssets\Hovl Studio\Toon projectiles\Shaders\AddTrail.shader" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\CharaSkin.cginc" />
+    <None Include="Assets\BossAssets\Robot Tanker\Read me.txt" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
+    <None Include="Assets\BossAssets\Hovl Studio\Toon projectiles\Demo scene\Readme.txt" />
     <None Include="Assets\Wao3DStudio\Spells\Bow Shot Spells\ReadMe.txt" />
     <None Include="Assets\Hovl Studio\Magic circles Vol 2\Shaders\Add_CenterGlow.shader" />
+    <None Include="Assets\BossAssets\GabrielAguiarProductions\Unique_ToonProjectiles_Volume_1\Readme.txt" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
     <None Include="Assets\CharacterAssets\Suriyun\README.txt" />
     <None Include="Assets\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
