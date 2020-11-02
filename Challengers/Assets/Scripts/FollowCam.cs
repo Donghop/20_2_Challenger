@@ -20,8 +20,6 @@ public class FollowCam : MonoBehaviour
 
     private void LateUpdate()
     {
-        //transform.position = player.position + offset;
-
         var wantedRotationAngle = player.eulerAngles.y;
         var wantedHeight = player.position.y + height;
 
