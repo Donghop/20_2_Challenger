@@ -89,11 +89,15 @@
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CameraTestDong\CameraButton.cs" />
     <Compile Include="Assets\Scripts\CameraTestDong\TestCamerMove.cs" />
+    <Compile Include="Assets\Scripts\FadeOutWallTest.cs" />
     <Compile Include="Assets\Scripts\FlameStorm.cs" />
     <Compile Include="Assets\Scripts\FollowCam.cs" />
     <Compile Include="Assets\Scripts\KnightAttack.cs" />
     <Compile Include="Assets\Scripts\KnightAttackObject.cs" />
     <Compile Include="Assets\Scripts\MageAttack.cs" />
+    <Compile Include="Assets\Scripts\MagicGolem.cs" />
+    <Compile Include="Assets\Scripts\MeteorProjector.cs" />
+    <Compile Include="Assets\Scripts\MiniGolem.cs" />
     <Compile Include="Assets\Scripts\MyGizmos.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\RealFollowCam.cs" />
@@ -101,11 +105,17 @@
     <Compile Include="Assets\Scripts\Teleport.cs" />
     <Compile Include="Assets\Scripts\TestBullet.cs" />
     <Compile Include="Assets\Scripts\TestDooly.cs" />
+    <Compile Include="Assets\Scripts\TestManager.cs" />
+    <Compile Include="Assets\Scripts\TestProjector.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <None Include="Assets\AssetResources\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\AssetResources\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
+    <None Include="Assets\AssetResources\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
     <None Include="Assets\AssetResources\BossAssets\Hovl Studio\Toon projectiles\Demo scene\HDRP and URP(LWRP).txt" />
     <None Include="Assets\AssetResources\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
     <None Include="Assets\AssetResources\CharacterAssets\Suriyun\UnityChanShader\Shader\CharaOutline.cginc" />
     <None Include="Assets\AssetResources\BossAssets\EgyptMonsters\Demo\DemoAssets\Shaders\GrassAnimate.shader" />
+    <None Include="Assets\AssetResources\Standard Assets\Effects\Projectors\Guidelines.txt" />
     <None Include="Assets\AssetResources\Hovl Studio\Magic circles Vol 2\Demo scene\HDRP and URP(LWRP).txt" />
     <None Include="Assets\AssetResources\Y17\Fantastic Fires\Shaders\FireEffect2.shader" />
     <None Include="Assets\AssetResources\CharacterAssets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
@@ -341,6 +351,9 @@
     </Reference>
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:/Users/24565/Documents/20_2_Challenger/Challengers/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

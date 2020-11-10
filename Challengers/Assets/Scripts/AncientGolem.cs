@@ -10,10 +10,15 @@ public class AncientGolem : MonoBehaviour
     private Animator anim;
     private Vector3 moveDir;
     private Rigidbody rb;
+    public GameObject testProjector; //테스트
+    public GameObject miniGolem;
+    public GameObject furyZone;
 
     public float distance;
     private float attackDelay;
     public float speed;
+    public float MaxHP;
+    public float curHP;
     public int attackStack;
     public int shockwaveStack;
 
@@ -21,6 +26,10 @@ public class AncientGolem : MonoBehaviour
     private bool isActivate;
     private bool canMove;
     private bool tracing;
+    private bool isFury;
+
+    private Vector3 testPosition;
+    private Vector3 playerPos;
     
 
     private void Start()
@@ -33,16 +42,21 @@ public class AncientGolem : MonoBehaviour
         isActivate = false;
         canMove = false;
         tracing = false;
+        isFury = false;
         attackDelay = 2.0f;
         speed = 2.2f;
         attackStack = 0;
         shockwaveStack = 0;
+        MaxHP = 6000;
+        curHP = 6000;
     }
 
     private void Update()
     {
         anim.SetBool("isMoving", tracing);
         distance = Vector3.Distance(player.position, transform.position);
+        playerPos = new Vector3(player.position.x, transform.position.y, player.position.z);
+        testPosition = new Vector3(player.position.x, 5.0f, player.position.z); //테스트
 
         if (distance < 8.0f && isActivate == false)
         {
@@ -62,9 +76,15 @@ public class AncientGolem : MonoBehaviour
 
         if (canMove == true && tracing == true)
         {
-            moveDir = (player.transform.position - this.gameObject.transform.position).normalized;
+            moveDir = (playerPos - transform.position).normalized;
             tr.position += moveDir * speed * Time.deltaTime;
             tr.LookAt(tr.position + moveDir);
+        }
+
+        if(curHP<=MaxHP/2 && isFury==false)
+        {
+            isFury = true;
+            GolemFury();
         }
     }
 
@@ -100,6 +120,7 @@ public class AncientGolem : MonoBehaviour
     {
         attackStack++;
         anim.SetTrigger("Earthquake");
+        Instantiate(testProjector, testPosition, testProjector.transform.rotation);
     }
 
     private void ShockWave()
@@ -112,8 +133,23 @@ public class AncientGolem : MonoBehaviour
     private void SpawnMiniGolem()
     {
         shockwaveStack = 0;
-        Debug.Log("골렘 소환!");
+        for(int i=0;i<3;i++)
+        {
+            float randomX = Random.Range(-10f, 10f);
+            float randomZ = Random.Range(-10f, 10f);
+            Instantiate(miniGolem, new Vector3(randomX, 0.5f, randomZ),Quaternion.identity);
+        }
         StartCoroutine(PlayAttackPattern(attackDelay));
+    }
+
+    private void GolemFury()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            float randomX = Random.Range(-10f, 10f);
+            float randomZ = Random.Range(-10f, 10f);
+            Instantiate(furyZone, new Vector3(randomX, 0.0f, randomZ), Quaternion.identity);
+        }
     }
 
     public void Activate()
@@ -132,7 +168,5 @@ public class AncientGolem : MonoBehaviour
     {
         canMove = true;
         StartCoroutine(PlayAttackPattern(attackDelay));
-    }
-
-    
+    }    
 }

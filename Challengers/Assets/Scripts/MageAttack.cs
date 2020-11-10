@@ -23,6 +23,8 @@ public class MageAttack : MonoBehaviour
     private float chargeTime;
     private float tpCooldown;
     private float fsCooldown;
+    public float maxHP;
+    public float curHP;
 
     private Ray ray;
     private RaycastHit hit;
@@ -34,6 +36,8 @@ public class MageAttack : MonoBehaviour
         chargeTime = 0;
         tpCooldown = 8.0f;
         fsCooldown = 10.0f;
+        maxHP = 1000;
+        curHP = 1000;
         isAttack = false;
         canTP = true;
         canFS = true;
